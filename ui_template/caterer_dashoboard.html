@@ -28,7 +28,7 @@
         <section>
             <div class="mealcard-avatar">
                 <img class="im" src="pot.jpg" alt="pot" width="15%">
-                <button id="btnModal" class="btn btn-order">Add A Meal</button>
+                <button class="trigger">Add A Meal</button>
             </div>
         </section>
 
@@ -62,5 +62,30 @@
                     <td data-title="Action"><button class="btn btn-danger"><i class="fa fa-times"></i> Delete</button></td>
                 </tr>
         </table>
+        <!-- a modal form to add meals -->
+        <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Add A Meal</h2>
+            <form>
+                <div class="form-row">
+                  <label for="name">Meal:</label>
+                  <input type="text" class="form-control" placeholder="Meal name">
+                </div>
+                <div class="form-row">
+                    <label for="name">Price:</label>
+                    <input type="text" class="form-control" placeholder="&#8358 0.00">
+                </div>
+                <div class="form-row">
+                    <label for="name">Quantity:</label>
+                    <input type="text" class="form-control" placeholder="Quantity">
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-order">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="modal.js"></script>
     </body>
 </html>
