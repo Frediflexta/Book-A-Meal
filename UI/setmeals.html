@@ -9,17 +9,17 @@
         <title>Book-A-Meal</title>
     </head>
     <body>
-         <nav>
-            <a id="logo" href="landing_page.html">Book-A-Meal</a>
-            <a href="setmeals.html">SetMeals</a>
+        <nav>
+            <a id="logo" href="index.html">Book-A-Meal</a>
+            <a href="caterer_dashboard.html">Dashboard</a>
             <a href="sum_transaction.html">History</a>
         </nav>
         <header>
-            <h2>Manage Orders and Meals</h2>
+            <h2>Todays Menu</h2>
         </header>
+
          <!-- Caterer landing page, where they can add meals, add and edit meals available -->
        <section>
-
             <div class="caterer-details">
                 <h3>Akna Enobong</h3>
                 <p><b>ChawMania Inc</b></p>
@@ -28,11 +28,12 @@
        </section>
         <section>
             <div class="mealcard-avatar">
-                <button class="trigger">Add A Meal</button>
+                <button class="trigger">Set Meals</button>
             </div>
         </section>
 
-        <table class="table table-bordered table-striped table-mc-red">
+         <table class="table table-bordered table-striped table-mc-red">
+            <caption><h2>Meals Of The Day</h2></caption>
             <thead>
                 <tr>
                     <th></th>
@@ -47,10 +48,8 @@
                     <td data-title="No">1</td>
                     <td data-title="Date">4/20/2018</td>
                     <td data-title="Item">Ewa Goin</td>
-                    <td data-title="Action"> Not Ready</td>
+                    <td data-title="Action">Ready</td>
                     <td data-title="Amount"><span>&#8358</span>900</td>
-                    <td data-title="Action"><button class="btn btn-blue"><i class="fa fa-edit"></i> Edit</button></td>
-                    <td data-title="Action"><button class="btn btn-danger"><i class="fa fa-times"></i> Delete</button></td>
                 </tr>
                 <tr>
                     <td data-title="No">2</td>
@@ -58,15 +57,14 @@
                     <td data-title="Item">Eba and Okro soup</td>
                     <td data-title="Action">Ready</td>
                     <td data-title="Amount"><span>&#8358</span>1500</td>
-                    <td data-title="Action"><button class="btn btn-blue"><i class="fa fa-edit"></i> Edit</button></td>
-                    <td data-title="Action"><button class="btn btn-danger"><i class="fa fa-times"></i> Delete</button></td>
                 </tr>
         </table>
-        <!-- a modal form to add meals -->
+
+         <!-- a modal form to add meals -->
         <div class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <h2>Add A Meal</h2>
+            <h2>List Meal</h2>
             <form>
                 <div class="form-row">
                   <label for="name">Meal:</label>
@@ -77,8 +75,8 @@
                     <input type="text" class="form-control" placeholder="&#8358 0.00">
                 </div>
                 <div class="form-row">
-                    <label for="name">Quantity:</label>
-                    <input type="text" class="form-control" placeholder="Quantity">
+                    <label for="name">Date:</label>
+                    <input type="text" class="form-control" placeholder="dd/mm/yy">
                 </div>
                 <div class="modal-footer">
                   <button class="btn btn-order">Add</button>
