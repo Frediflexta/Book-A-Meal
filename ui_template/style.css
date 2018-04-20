@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    color: #33140e;
+    color: #33550e;
     margin: 0;
     padding: 0;
     perspective: 1px;
@@ -19,7 +19,7 @@ body *{
 }
 
 h1 {
-  background-color: #EA5B31;
+  background-color: #24C285;
 }
 
 /*header {
