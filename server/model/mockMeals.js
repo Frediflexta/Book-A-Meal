@@ -24,4 +24,5 @@ const meals = [
     action: 'Ready'
 }
 ];
+
 export default meals;
