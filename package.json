@@ -4,9 +4,8 @@
   "description": "Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.",
   "main": "app.js",
   "scripts": {
-    "start": "babel-node server/bin/www",
-    "start:dev": "nodemon --exec babel-node server/bin/www",
-    "lint": "eslint server/*/.js --fix",
+    "start": "nodemon --exec babel-node -- server/app.js",
+    "lint": "eslint \"server/**/*.js\" app.js --fix",
     "test": "mocha --compilers js:babel-core/register server/*/.test.js",
     "test-watch": "nodemon --exec \"npm test\""
   },
@@ -21,9 +20,7 @@
   },
   "homepage": "https://github.com/Frediflexta/Book-A-Meal#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "bcrypt": "^2.0.1",
     "body-parser": "^1.18.2",
     "dotenv": "^5.0.1",
@@ -31,7 +28,9 @@
     "morgan": "^1.9.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
     "eslint": "^4.19.1",
