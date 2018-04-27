@@ -23,6 +23,14 @@ class Meals {
             image: req.body.image,
         };
 
+        // ensure all the fields are field, if not throw a 404 'Not found error'
+        if (!meal.name || !meal.price || !meal.image)
+        {
+            return res.status(404).json({
+                message: 'Invalid parameters',
+                status: 'error'
+            });
+        }
         // and pushes onto the array of meal objects
         meals.push(meal);
         return res.status(201).json({
@@ -30,7 +38,6 @@ class Meals {
            meals: meals
         });
 
-        // ensure all the fields are field, if not throw a 404 'Not found error'
     }
 }
 
