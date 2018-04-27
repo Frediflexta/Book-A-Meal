@@ -14,6 +14,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // route to GET meals
 app.use('/api/v1/getmeals', routes);
 
+// route to POST meals
+app.use('/api/v1/addmeal', routes);
+
 // creates a port for the app
 const port = process.env.PORT || 8080;
 
