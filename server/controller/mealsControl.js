@@ -48,7 +48,7 @@ class Meals {
                     meal.name = name || meal.name;
                     meal.price = price || meal.price;
                     meal.image = image || meal.image;
-                    /* console.log(JSON.stringify(id));
+                    /*console.log(JSON.stringify(id));
                     console.log(JSON.stringify(name));
                     console.log(JSON.stringify(req.body.price));
                     console.log(JSON.stringify(req.body.image));*/
