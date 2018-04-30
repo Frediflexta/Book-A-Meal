@@ -28,5 +28,5 @@ const port = process.env.PORT || 8080;
 
 // listenings to the app as we build
 app.listen(port, () => {
-   console.log(`Express server is running on ${port}`);
+  console.log(`Express server is running on ${port}`);
 });
