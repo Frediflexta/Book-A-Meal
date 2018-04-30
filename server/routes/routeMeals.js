@@ -10,4 +10,7 @@ router.get('/', Meals.getMeals);
 // POST/meal: route to add meals
 router.post('/', Meals.addMeal);
 
+// PUT/meals/meal:id: Updates a meals, uses :id as a search param
+router.put('/', Meals.updateMeal);
+
 export default router;
