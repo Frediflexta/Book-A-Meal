@@ -103,6 +103,15 @@ header *{
     text-align: center;
 }
 
+/* required text input */
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
 /* Handles the sing in buttons */
 button {
     background-color: #EA5B31;
@@ -200,9 +209,9 @@ label {
   color: #fff;
 }
 
-.py-10{
-  padding: 10px 0px !important;
-}
+/*.py-10{
+  padding: /*10px 0px !important;
+}*/
 .text-center{
   text-align: center;
 }
@@ -212,6 +221,7 @@ label {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 40%;
+    margin: 0 auto
 }
 
 .card:hover {
