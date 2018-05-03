@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Frediflexta/Book-A-Meal#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "bcrypt": "^2.0.1",
     "body-parser": "^1.18.2",
     "dotenv": "^5.0.1",

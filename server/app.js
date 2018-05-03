@@ -15,13 +15,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger('dev'));
 
 // route to GET meals
-app.use('/api/v1/getmeals', routes);
+app.use(routes);
 
-// route to POST meals
-app.use('/api/v1/addmeal', routes);
-
-// route to PUT meal/meal:id
-app.use('/api/v1/updateMeal/:mealid', routes);
 
 // creates a port for the app
 const port = process.env.PORT || 8080;

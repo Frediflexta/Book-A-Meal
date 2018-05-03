@@ -5,12 +5,15 @@ import Meals from '../controller/mealsControl';
 const router = express.Router();
 
 // GET/meals; Routes to retrieve all meals
-router.get('/', Meals.getMeals);
+router.get('/api/v1/getmeals', Meals.getMeals);
 
 // POST/meal: route to add meals
-router.post('/', Meals.addMeal);
+router.post('/api/v1/addmeal', Meals.addMeal);
 
 // PUT/meals/meal:id: Updates a meals, uses :id as a search param
-router.put('/', Meals.updateMeal);
+router.put('/api/v1/updateMeal/:mealid', Meals.updateMeal);
+
+// DELETE/meals/:mealid: Deletes meals, while using  :id as a search param
+router.delete('/api/v1/deleteMeal/:mealid', Meals.deleteMeal);
 
 export default router;

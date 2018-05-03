@@ -34,24 +34,20 @@ class Meals {
     const { mealid } = req.params;
 
     const {
-      id, name, price, image,
+      name, price, image
     } = req.body;
 
-    // forEach enables access of every element of the array(or keys of the obj)
-    meals.forEach((meal) => {
-      // on an element,check to see if the mealId of a key, matches the req.params key
-      if (parseInt(mealid, 10) === parseInt(id, 10)) {
-        meal.name = name || meal.name;
-        meal.price = price || meal.price;
-        meal.image = image || meal.image;
-      }
-    });
+    const meal = meals.find(index => { return index.id === Number(mealid.id) } );
 
-    return res.status(202).json({
+    const updatedMeal = { ...meals.meal, ...req.body };
+    meals.splice( mealid, 1, updatedMeal );
+
+    return res.status(200).json({
       message: 'Meal successfully modifed',
       meals,
     });
   }
+
 }
 
 export default Meals;
